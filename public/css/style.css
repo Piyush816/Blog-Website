@@ -45,3 +45,17 @@ a {
     font-size: 2rem;
   }
 }
+
+
+@media (max-width:400px) {
+  .card {
+    width:300px;
+  }
+}
+
+@media (max-width:280px) {
+  .card {
+    width:250px;
+  }
+}
+
