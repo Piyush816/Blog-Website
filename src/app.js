@@ -7,6 +7,7 @@ const passport = require("passport");
 const User = require("./models/schema");
 const Post = require("./models/postschema");
 const Router = require("./router/routes");
+require("dotenv").config()
 require("./db/conn");
 
 // setting port and app
@@ -21,7 +22,7 @@ app.set("view engine", "ejs");
 // initialize session
 app.use(
   session({
-    secret: "hello world",
+    secret: process.env.SESSIONSECRET,
     resave: false,
     saveUninitialized: true,
   })

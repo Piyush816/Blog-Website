@@ -17,9 +17,6 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
   },
-  blogs: {
-    type: [],
-  },
   joinedAt: {
     type: String,
     default: date,

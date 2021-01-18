@@ -145,7 +145,6 @@ app.get("/edit/:id", async (req, res) => {
   if (req.isAuthenticated()) {
     try {
       const post = await Post.findById(req.params.id);
-      console.log(post);
       res.render("edit", {
         post: post,
         Authenticated: true,

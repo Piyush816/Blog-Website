@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 mongoose
-  .connect("mongodb://localhost:27017/TechblogsDB", {
+  .connect(process.env.DB, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
-    useFindAndModify:false
+    useFindAndModify: false,
   })
   .then(() => {
     console.log("connected..");
@@ -13,3 +14,4 @@ mongoose
   .catch((err) => {
     console.log("not connected..");
   });
+
