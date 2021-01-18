@@ -1,0 +1,21 @@
+<%- include ("partials/header",(Authenticated)); -%> 
+
+    <main class="container my-5">
+        <h2 class="text-center"><%= posts.length %> results found</h2>
+      <% posts.forEach(post => { %>
+      <div class="posts my-5 p-4 border shadow">
+        <h3 class="main-header"><%= post.title %></h3>
+        <small><%= post.date %> </small>
+        <p>
+          <%= post.post.slice(0,400) +"..."%>
+          <a href="/post/<%= post.id %> ">Read more</a>
+        </p>
+        <p>Autor - <%= post.author%></p>
+        
+      </div>
+      <% }) %>
+    </main>
+
+    <%- include("partials/footer"); -%>
+  </body>
+</html>

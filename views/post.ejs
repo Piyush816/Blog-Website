@@ -1,0 +1,18 @@
+<%- include ("partials/header",(Authenticated)); -%> 
+
+    <!-- home section starts -->
+
+    <main class="container my-5">
+      <div class="posts my-5 p-5 border shadow">
+        <h1 class="main-header text-center"><%= post.title %></h1>
+        <p class="my-5"><%= post.post %></p>
+        <p class="text-center">Created on <%= post.date %></p>
+        <p class="text-center">Author - <%= post.author %></p>
+      </div>
+
+
+    </main>
+
+    <%- include("partials/footer"); -%>
+  </body>
+</html>

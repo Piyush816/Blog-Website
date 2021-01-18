@@ -1,0 +1,30 @@
+<%- include ("partials/header",(Authenticated)); -%> 
+
+
+    <!-- home section starts -->
+
+
+    <main class="container my-5">
+      <% posts.forEach(post => { %>
+      <div class="posts my-5 p-4 border shadow">
+        <div class="editbtn">
+          <a href="/edit/<%= post.id %> "
+            ><i class="far fa-edit text-dark fa-2x"></i
+          ></a>
+          <a href="/delete/<%= post.id %>"
+            ><i class="fas fa-trash fa-2x text-dark mx-3"></i
+          ></a>
+        </div>
+        <h3 class="main-header"><%= post.title %></h3>
+        <small><%= post.date %> </small>
+        <p>
+          <%= post.post.slice(0,400) +"..."%>
+          <a href="/post/<%= post.id %> ">Read more</a>
+        </p>
+      </div>
+      <% }) %>
+    </main>
+
+    <%- include("partials/footer"); -%>
+  </body>
+</html>

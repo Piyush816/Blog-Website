@@ -1,0 +1,32 @@
+<%- include ("partials/header",(Authenticated)); -%> 
+
+
+<main class="container my-5">
+  <form action="/addblog" method="POST">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Title"
+        name="title"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Blog</label
+      >
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="10"
+        placeholder="Write your Blog here"
+        name="post"
+      ></textarea>
+    </div>
+    <button class="btn btn-primary">Publish</button>
+  </form>
+</main>
+
+<%- include("partials/footer"); -%>

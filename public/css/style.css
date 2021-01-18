@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.form-group {
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.card {
+  width: 30%;
+}
+
+.editbtn {
+  text-align: right;
+}
+
+.errorh {
+  font-size: 15rem;
+}
+.errorp {
+  font-size: 5rem;
+}
+
+#errorbody {
+  background-color: #1e272e;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 786px) {
+  .errorh {
+    font-size: 5rem;
+  }
+  .errorp {
+    font-size: 2rem;
+  }
+}
